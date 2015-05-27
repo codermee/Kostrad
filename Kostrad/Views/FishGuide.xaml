@@ -1,0 +1,123 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Kostrad.Views.FishGuide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <phone:Pivot Title="FISKGUIDE">
+            <phone:PivotItem Header="röda listan">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="260"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="65"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" FontWeight="SemiBold" Text="Högst 2-3 gånger per år (kvicksilver)" Foreground="{StaticResource PhoneAccentBrush}"/>
+                    <StackPanel Orientation="Vertical" Grid.Row="1">
+                        <TextBlock Text="• Abborre"/>
+                        <TextBlock Text="• Gädda"/>
+                        <TextBlock Text="• Gös"/>
+                        <TextBlock Text="• Haj"/>
+                        <TextBlock Text="• Lake"/>
+                        <TextBlock Text="• Rocka"/>
+                        <TextBlock Text="• Stor hälleflundra (Hippoglossus hippoglossus)"/>
+                        <TextBlock Text="• Svärdfisk"/>
+                        <TextBlock Text="• Tonfisk, färsk/fryst"/>
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" FontWeight="SemiBold" Text="Högst 2-3 gånger per år (dioxin och PCB)" Foreground="{StaticResource PhoneAccentBrush}"/>
+                    <StackPanel Orientation="Vertical" Grid.Row="3">
+                        <TextBlock TextWrapping="Wrap" Text="• Strömming/sill från Östersjön, även surströmming"/>
+                        <TextBlock TextWrapping="Wrap" Text="• Lax* och öring* vildfångad från Östersjön, Vänern och Vättern"/>
+                        <TextBlock Text="• Sik* från Vänern"/>
+                        <TextBlock Text="• Röding* vildfångad från Vättern"/>
+                    </StackPanel>
+                    <TextBlock Grid.Row="4" FontStyle="Italic" FontSize="{StaticResource PhoneFontSizeSmall}" TextWrapping="Wrap" Text="* Det gäller främst kvinnor som äter egenfångad fisk. Dessa fiskar finns sällan i vanliga affärer."/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="gröna listan">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="• All odlad fisk"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="• Alaska pollock"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="• Ansjovis"/>
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="• Blåmusslor"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" Text="• Fiskbullar"/>
+                            <TextBlock Grid.Row="5" Grid.Column="0" Text="• Fiskpinnar"/>
+                            <TextBlock Grid.Row="6" Grid.Column="0" Text="• Flundra/skrubbskädda"/>
+                            <TextBlock Grid.Row="7" Grid.Column="0" Text="• Hoki"/>
+                            <TextBlock Grid.Row="8" Grid.Column="0" Text="• Hummer"/>
+                            <TextBlock Grid.Row="9" Grid.Column="0" Text="• Kolja"/>
+                            <TextBlock Grid.Row="10" Grid.Column="0" Text="• Krabba, det vita köttet"/>
+                            <TextBlock Grid.Row="11" Grid.Column="0" Text="• Kräftor"/>
+                            <TextBlock Grid.Row="12" Grid.Column="0" Text="• Kummel"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="• Lax och laxfiskar"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="• Lutfisk"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text="• Makrill"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" Text="• Pangasiusmal"/>
+                            <TextBlock Grid.Row="4" Grid.Column="1" Text="• Pilgrimsmusslor"/>
+                            <TextBlock Grid.Row="5" Grid.Column="1" Text="• Räkor"/>
+                            <TextBlock Grid.Row="6" Grid.Column="1" Text="• Rödspätta"/>
+                            <TextBlock Grid.Row="7" Grid.Column="1" Text="• Sardiner"/>
+                            <TextBlock Grid.Row="8" Grid.Column="1" Text="• Sej"/>
+                            <TextBlock Grid.Row="9" Grid.Column="1" Text="• Sik, ej från Vänern"/>
+                            <TextBlock Grid.Row="10" Grid.Column="1" Text="• Sill, även inlagd"/>
+                            <TextBlock Grid.Row="11" Grid.Column="1" Text="• Tilapia"/>
+                            <TextBlock Grid.Row="12" Grid.Column="1" Text="• Tonfisk på burk"/>
+                            <TextBlock Grid.Row="13" Grid.Column="1" Text="• Torsk"/>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1">
+                        <TextBlock FontStyle="Italic" FontSize="{StaticResource PhoneFontSizeSmall}" TextWrapping="Wrap" Text="Ät nygjord eller nyförpackad gravad, rökt fisk och sushi."/>
+                    </StackPanel>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="information">
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="De flesta fiskar man kan köpa går bra att äta." TextWrapping="Wrap" Margin="0,0,0,10"/>
+                        <TextBlock Text="Den gröna listan visar exempel på fiskar du kan äta ofta, men det finns många fler." TextWrapping="Wrap" Margin="0,0,0,10"/>
+                        <TextBlock Text="Den röda listan visar vilka fiskar du inte bör äta så ofta, på grund av miljöföroreningar. Vissa fiskar är mindre bra att äta för miljöns skull." TextWrapping="Wrap" Margin="0,0,0,10"/>
+                        <TextBlock Text="Läs mer om fisk och miljö på Livsmedelsverkets hemsida (www.slv.se)" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>    
+</phone:PhoneApplicationPage>

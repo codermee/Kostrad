@@ -1,0 +1,61 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Kostrad.Views.CheeseGuide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <phone:Pivot Title="OSTGUIDE">
+            <phone:PivotItem Header="röda listan">
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Mögelost" FontWeight="Bold"/>
+                        <TextBlock Text="som brie, camembert, gongonzola, chèvre gjord på pastöriserad och opastöriserad mjölk" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Kittost" FontWeight="Bold"/>
+                        <TextBlock Text="som vacherol, taleggio, munster gjord på pastöriserad och opastöriserad mjölk" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Färskost" FontWeight="Bold"/>
+                        <TextBlock Text="och annan mjuk ost gjord på opastöriserad mjölk" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Fetaost" FontWeight="Bold"/>
+                        <TextBlock Text="gjord på opastöriserad mjölk" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="All ost som hettas upp tills det bubblar, t ex i såser och gratänger, är säker" FontStyle="Italic" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="gröna listan">
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Hårdost" FontWeight="Bold"/>
+                        <TextBlock Text="gjord på både pastöriserad och opastöriserad mjölk. Exempel: grevé, herrgård, parmesan, gruyère, appenzeller och emmentaler" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Smältost" FontWeight="Bold"/>
+                        <TextBlock Text="och annan bredbar ost i tub eller plastask" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Fetaost" FontWeight="Bold"/>
+                        <TextBlock Text="från pastöriserad mjölk" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Mozzarella" FontWeight="Bold"/>
+                        <TextBlock Text="nyförpackad" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Ricotta" FontWeight="Bold"/>
+                        <TextBlock Text="nyförpackad" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Halloumi" FontWeight="Bold"/>
+                        <TextBlock Text="nyförpackad" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="All ost som hettas upp tills det bubblar, t ex i såser och gratänger, är säker" FontStyle="Italic" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="information">
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Listeria är en bakterie som i ovanliga fall kan finnas i vissa ostar. Risken är liten, men om du vill minska den ytterligare är det bra att undvika ostarna i den röda listan. Ostarna i den gröna listan är säkra att äta." TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+</phone:PhoneApplicationPage>

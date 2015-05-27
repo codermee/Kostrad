@@ -1,0 +1,35 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Kostrad.Views.InfoGuide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <phone:Pivot Title="ATT TÄNKA PÅ">
+            <phone:PivotItem Header="information">
+                <ScrollViewer>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Alkohol" FontWeight="Bold"/>
+                        <TextBlock Text="Passerar över till ditt barn via moderkakan. Fostret är känsligare för alkohol än vad du är, så avstå från alkohol så snart du tror att du är gravid." TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Lever" FontWeight="Bold"/>
+                        <TextBlock Text="Innehåller mycket vitamin A, som i höga doser kan skada ditt barn. Undvik därför lever, leverrätter och fiskleverolja. Leverpastej kan du äta – den innehåller inte så mycket lever." TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Kaffe och svart te" FontWeight="Bold"/>
+                        <TextBlock Text="Innehåller koffein, som i höga doser kan öka risken för missfall. När man är gravid bör man därför inte få i sig mer än 300 milligram koffein per dag. Det motsvarar antingen tre koppar kaffe (1,5 dl/kopp) eller sex koppar svart te (2 dl/kopp). Även coladrycker och energidrycker kan innehålla koffein." TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Var försiktig med kosttillskott, örtprodukter, naturläkemedel och traditionella växtbaserade läkemedel, eftersom man många gånger inte vet om de kan vara skadliga för barnet. Använd inte sådana produkter utan att först diskutera med din barnmorska eller läkare." TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Om du tar vitamintabletter är det viktigt att följa doseringsanvisningen och att undvika överdosering. Se också efter att de innehåller högst 1 milligram vitamin A per dagsdos." TextWrapping="Wrap" Margin="0,0,0,20"/>
+                        <TextBlock Text="Du bör helt undvika ginsengprodukter. De är olämpliga när man är gravid. Var också försiktig med algprodukter som innehåller mycket jod. Alltför höga doser jod kan vara skadligt." TextWrapping="Wrap"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+</phone:PhoneApplicationPage>

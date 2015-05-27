@@ -1,0 +1,67 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Kostrad.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <phone:Pivot Title="KOSTRÅD FÖR GRAVIDA">
+            <phone:PivotItem Header="alla guider">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="95"/>
+                        <RowDefinition Height="95"/>
+                        <RowDefinition Height="95"/>
+                        <RowDefinition Height="95"/>
+                        <RowDefinition Height="95"/>
+                        <RowDefinition Height="95"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Grid.Row="0" Height="85" Background="{StaticResource PhoneAccentBrush}">
+                        <Image Height="85" Width="85" Source="Assets\fish_white.png"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="1" Height="85" Background="{StaticResource PhoneAccentBrush}">
+                        <Image Height="85" Width="85" Source="Assets\cheese_white.png"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="2" Height="85" Background="{StaticResource PhoneAccentBrush}">
+                        <Image Source="Assets\meat_white.png"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="3" Height="85" Background="{StaticResource PhoneAccentBrush}">
+                        <Image Source="Assets\utensils.png"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="4" Height="85" Background="{StaticResource PhoneAccentBrush}">
+                        <Image Source="Assets\bacteria_white.png"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="5" Height="85" Background="{StaticResource PhoneAccentBrush}">
+                        <Image Source="Assets\info_white.png"/>
+                    </StackPanel>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Padding="20,20,0,0" FontSize="{StaticResource PhoneFontSizeLarge}" FontWeight="Light" Text="fiskguide" Tap="OnTextBlockFishTap"/>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Padding="20,20,0,0" FontSize="{StaticResource PhoneFontSizeLarge}" FontWeight="Light" Text="ostguide" Tap="OnTextBlockCheeseTap"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Padding="20,20,0,0" FontSize="{StaticResource PhoneFontSizeLarge}" FontWeight="Light" Text="köttguide" Tap="OnTextBlockMeatTap"/>
+                    <TextBlock Grid.Column="1" Grid.Row="3" Padding="20,20,0,0" FontSize="{StaticResource PhoneFontSizeLarge}" FontWeight="Light" Text="näringsguide" Tap="OnTextBlockNutritionTap"/>
+                    <TextBlock Grid.Column="1" Grid.Row="4" Padding="20,20,0,0" FontSize="{StaticResource PhoneFontSizeLarge}" FontWeight="Light" Text="bakterier och parasiter" Tap="OnTextBlockBacteriaTap"/>
+                    <TextBlock Grid.Column="1" Grid.Row="5" Padding="20,20,0,0" FontSize="{StaticResource PhoneFontSizeLarge}" FontWeight="Light" Text="att tänka på" Tap="OnTextBlockInfoTap"/>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="om appen" Click="OnApplicationBarAboutIconButtonClick"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
